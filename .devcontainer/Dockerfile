@@ -18,9 +18,6 @@ LABEL maintainer="konas13@gmail.com"
 # Install R packages
 RUN Rscript -e "install.packages(c('dplyr', 'ggplot2', 'tidyr'), repos='https://cloud.r-project.org')"
 
-# Install a package from GitHub (e.g., user-defined packages)
-RUN Rscript -e "install.packages('devtools', repos='https://cloud.r-project.org')" \
-    && Rscript -e "devtools::install_github("jiabowang/GAPIT", force=TRUE)" 
     
 #FROM mcr.microsoft.com/vscode/devcontainers/base:ubuntu
 
